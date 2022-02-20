@@ -5,24 +5,6 @@ Note: YOU NEED A PING LOWER THAN 100 FOR THIS TO WORK, IT FILLS UP THE SERVER HT
 
 
 
-There are two versions:
-One with a minimal ui, (two different modes), and one with a debug style ui, that constantly runs with one mode.
-
-
-Minimal UI:
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Credits go to reestart, original finder of this. (reestart#8891)
 
