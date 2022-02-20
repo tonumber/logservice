@@ -7,7 +7,7 @@ UI is complete bait, meant to confuse others who look at it.
 Releasing it open source for the simple fact of 'fuck boolean'
 
 Credits:
-reestart, TextXAlignment
+reestart, Agent
 
 ]]
 
